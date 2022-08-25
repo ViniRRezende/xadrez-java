@@ -121,7 +121,7 @@ public class ChessMatch {
 			throw new IllegalStateException("There is no piece to be promoted");
 		}
 		if (!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals("Q")) {
-			throw new InvalidParameterException("Invalid type for promotion");
+			return promoted;//Tirada a excecao pois ela n era tratada entao apenas vamos retornar a mesma coisa e poderá fazer novamente - isto ocorre no programa principal
 		}
 		
 		Position pos = promoted.getChessPosition().toPosition();
